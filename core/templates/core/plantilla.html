@@ -1,0 +1,97 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+</head>
+
+<body>
+  <header>
+    <div class="contenido">
+      <!-- #ENCABEZADO CON LOGO -->
+      <div id="logo">
+        <a href="{% url 'home' %}"><img src="{% static 'core/img/imagenes/helfi GARDEN (2).png' %}" alt="a"></a>
+      </div>
+      <div class="header2">
+        <nav>
+          <img src="{% static 'core/img/imagenes/user_32px.png' %}" alt="a">{{user.username}}&nbsp;|&nbsp;
+          {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}">Cerrar sesión</a>
+          {% else %}
+          <a href="{% url 'login' %}">Iniciar sesión</a>
+          {% endif %}
+        </nav>
+      </div>
+      <div id="carrito" style="padding-right: 100px;">
+        <a href="{% url 'Carrito' %}"><img src="{% static 'core/img/imagenes/Diseño sin título (2).png' %}"
+            alt="a2"></a>
+
+      </div>
+    </div>
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'home' %}">Inicio</a>
+            <a class="nav-item nav-link" href="#">Herramientas</a>
+            <a class="nav-item nav-link" href="#">Ofertas!</a>
+            {% if user.username == 'admin'  %}
+            <a class="nav-item nav-link" href="{% url 'listarProducto' %}">Productos</a>
+            <a class="nav-item nav-link" href="{% url 'listarPromocion' %}">Promociones</a>
+            {% endif %}
+          </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    {% block contenido %}
+    {% endblock %}
+  </div>
+  <hr>
+  <div class="pie" style="display: flex;justify-content: space-around;">
+    <footer>
+      <br>
+      <h6>Tienda SHOP GARDEN</h6>
+      <a href="#">Contactanos</a><br>
+      <a href="#">Despachos</a><br>
+      <a href="#">¿Quienes somos?</a><br>
+      <a href="#">Terminos de servicio</a><br>
+      <a href="#">Politicas de reembolzo</a>
+    </footer>
+    <footer>
+      <br>
+      <h6>NUESTRAS MARCAS</h6>
+      <a href="#">Anasac</a><br>
+      <a href="#">Fiskars</a><br>
+      <a href="#">Gilmour</a>
+    </footer>
+    <footer>
+      <br>
+      <h6>CONTACTOS</h6>
+      <a href="#">contacto@nova-group.cl</a><br>
+      <a href="#">Políticas de privacidad</a><br>
+      <a href="#">Términos y condiciones</a>
+    </footer>
+    <div>
+      <a href="#"><img src="{% static 'core/img/imagenes/icons8_Instagram_50px.png' %}" alt="k"></a>
+      <a href="#"><img src="{% static 'core/img/imagenes/icons8_facebook_50px.png' %}" alt="l"></a>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

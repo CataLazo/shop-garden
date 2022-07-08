@@ -1,0 +1,138 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% block contenido %}
+    
+    <!-- #CARRUSEL -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div style="display:flex;justify-content: center;">
+        <div style="width: 85%;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'core/img/imagenes/Screen_Shot_2021-12-31_at_10.47.26_2048x.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'core/img/imagenes/Screen_Shot_2021-12-31_at_10.55.19_2048x.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'core/img/imagenes/Screen_Shot_2021-12-31_at_11.02.16_2048x.png' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #TIPOS DE PRODUCTOS -->
+    <br>
+    <div class="venta1" style="display: flex;justify-content: center;justify-content: space-around;align-items: center;">
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/1.png' %}" alt="Avatar" style="width:100%">
+        </a>
+      </div>
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/2.png' %}" alt="Avatar" style="width:100%">
+        </a>
+      </div>
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/3.png' %}" alt="Avatar" style="width:100%">
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/4.png' %}" alt="Avatar" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <br>
+    <div class="separador" style="display:flex;align-items:center;justify-content: space-around;">
+      <hr size="6px" width="40%">
+      <p>Productos</p>
+      <hr size="6px" width="40%">
+    </div>
+    <!-- #PRODUCTOS EN VENTA -->
+    <div class="productos1"
+      style="display: flex;align-items: center;justify-content: space-around;text-decoration: none;">
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/pro1.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/pro2.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/pro3.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/pro4.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="separador" style="display:flex;align-items:center;justify-content: space-around;">
+      <hr size="6px" width="40%">
+      <p>Semillas</p>
+      <hr size="6px" width="40%">
+    </div>
+
+    <!-- #PRODUCTOS EN VENTA -->
+    <div class="productos2"
+      style="display: flex;align-items: center;justify-content: space-around;text-decoration: none;">
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/semilla1.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/semilla2.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/semilla3.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#"><img src="{% static 'core/img/imagenes/semilla4.png' %}" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <br>
+{% endblock %}

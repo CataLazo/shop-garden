@@ -1,0 +1,146 @@
+/*h1{
+    color: red;
+}*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer{
+    background-color: burlywood;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+.header {
+    width: 100vw;
+}
+#logo{
+    padding-left:30px ;
+}
+
+a:hover{
+    color: black;
+}
+#ingreso{
+    padding-left: 30px;
+}
+.header2{
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+/*PRODUCTOS*/
+
+.venta>a:hover {
+    opacity: 70%;
+    transition: 0.4s;
+}
+a{
+    text-decoration: none;
+}
+
+/*LOGIN*/
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+
+/*footer*/
+.pie{
+    background-color: antiquewhite;
+}
+#itcontrasena{
+    flex-direction: column;
+}
+#itcorreo{
+    flex-direction: column;
+}
+.checkbox{
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin-left: 30px;
+}
+/*RESPONDIVE*/
+@media only screen and (max-width: 1024px) {
+    .venta1 {
+        padding: 20px 2px 20px 2px;
+        flex-direction: column;
+    }
+
+    .productos1 {
+        padding: 20px 2px 20px 2px;
+        flex-direction: column;
+    }
+
+    .productos2 {
+        padding: 20px 2px 20px 2px;
+        flex-direction: column;
+    }
+
+    #buscador {
+        column-count: 0;
+        width: auto;
+    }
+
+    @media only screen and (max-width: 620px) {
+        .venta1 {
+            padding: 20px 2px 20px 2px;
+            flex-direction: column;
+        }
+
+        .productos1 {
+            padding: 20px 2px 20px 2px;
+            flex-direction: column;
+        }
+
+        .productos2 {
+            padding: 20px 2px 20px 2px;
+            flex-direction: column;
+        }
+
+        #notificacion>p {
+            font-size: 0.9rem;
+            padding-left: 0px;
+        }
+
+        .pie>h6 {
+            font-size: 0.5em;
+        }
+
+        #buscador {
+            column-count: 0;
+            width: auto;
+        }
+    }
+        @media only screen and (max-width: 538px) {
+            #buscar {
+                display: none;
+            }
+        }
+    }
+    html{
+        width: 100%;
+    }

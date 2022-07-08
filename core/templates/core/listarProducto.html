@@ -1,0 +1,38 @@
+{% extends 'core/plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+
+<br>
+<h1>Listado de Productos</h1>
+<br>
+<table class="table table-hover">
+    <tr>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>Stock</th>
+        <th>Precio</th>
+        <th>Modificar</th>
+        <th>Eliminar</th>
+    </tr>
+    {% for i in producto %}
+    <tr>
+        <td>{{i.idProducto}}</td>
+        <td>{{i.nombreProducto}}</td>
+        <td>{{i.stockProducto}}</td>
+        <td>{{i.precioProducto}}</td>
+        <td>
+            <a href="{% url 'modificarProducto' i.idProducto %}">Modificar</a>
+        </td>
+        <td>
+            <a href="{% url 'eliminarProducto' i.idProducto %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>¿Deseas agregar otro producto?</h3>
+<br>
+<button class="btn btn-primary"><a href="{% url 'agregarProducto' %}" style="text-decoration:none ; color: black;">Agregar</a></button>
+
+{{mensaje}}
+{% endblock %}
